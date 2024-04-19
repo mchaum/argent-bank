@@ -13,12 +13,15 @@ const Form = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    // Fonction pour gérer l'envoi du formulaire //
     const handleSubmit = (e) => {
         console.log(email, password);
         // Pour empêcher l'actualisation //
         e.preventDefault();
 
+        // Dispatch (fonction redux) de l'action logIn avec les données de connexion //
         dispatch(logIn({email, password})).then(action => {
+            // Retour vers une page une fois la connexion réussie //
             navigate("/")
         });
     }
