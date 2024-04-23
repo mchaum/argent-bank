@@ -44,7 +44,7 @@ const UserEdit = () => {
               {isEditing && (
             <form>
                 <div className="edit-user">
-                <div className="input-wrapper input-wrapper--edit">
+                <div className="input-wrapper input-wrapper-edit">
                         <label htmlFor="userName">User Name</label>
                         <input
                             type="text"
@@ -53,7 +53,7 @@ const UserEdit = () => {
                             autoComplete="off"
                             onChange={(e) => setNewUserName(e.target.value)} />
                     </div>
-                    <div className="input-wrapper input-wrapper--edit">
+                    <div className="input-wrapper input-wrapper-edit">
                         <label htmlFor="firstName">First Name</label>
                         <input
                             type="text"
@@ -61,7 +61,7 @@ const UserEdit = () => {
                             value={user.firstName}
                             disabled />
                     </div>
-                    <div className="input-wrapper input-wrapper--edit">
+                    <div className="input-wrapper input-wrapper-edit">
                         <label htmlFor="lastName">Last Name</label>
                         <input
                             type="text"
@@ -69,8 +69,8 @@ const UserEdit = () => {
                             value={user.lastName}
                             disabled />
                     </div>
-                    <button className="edit-button" type="submit" onClick={handleSaveUserName}>Save</button>
-                    <button className="edit-button" type="submit" onClick={handleCancel}>Cancel</button>
+                    <button className="edit-user-button" type="submit" onClick={handleSaveUserName}>Save</button>
+                    <button className="edit-user-button" type="submit" onClick={handleCancel}>Cancel</button>
 
                 </div>
             </form>
