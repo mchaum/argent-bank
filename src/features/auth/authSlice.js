@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const logIn = createAsyncThunk(
     'auth/login', 
-    async({email, password}, thunkAPI) => {
+    async({email, password, rememberMe}, thunkAPI) => {
     try {
         const response = await axios.post(
             "http://localhost:3001/api/v1/user/login", {
@@ -11,10 +11,15 @@ export const logIn = createAsyncThunk(
                 password: password,
               });
               // Récupération du token de connexion depuis la réponse //
-              const token = response.data.body;
+              const token = response.data.body.token;
               // Stockage du token dans le localStorage du navigateur et on le retourne //
-            localStorage.setItem('token', token)
-            return token;
+              if (rememberMe) {
+                localStorage.setItem('token', token);
+              } else {
+                sessionStorage.setItem('token', token);
+              }
+        
+              return token;
     } catch (error) {
         // En cas d'erreur, rejet + message d'erreur de l'API //
         return thunkAPI.rejectWithValue(error.response.data.message);

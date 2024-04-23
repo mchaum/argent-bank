@@ -20,6 +20,7 @@ html {
 
 .main {
     flex: 1;
+    min-height: 73vh;
 }
 
 .sr-only {
@@ -81,6 +82,10 @@ html {
 .main-nav-logo-image {
     max-width: 100%;
     width: 200px;
+}
+
+.navbar-connect {
+    display: flex;
 }
 
 /* Banner */
@@ -359,15 +364,6 @@ html {
     border-color: #00bc77;
     background-color: #00bc77;
     color: #fff;
-}
-
-.sign-in-content {
-    box-sizing: border-box;
-    background-color: white;
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding: 2rem;
 }
 
 .sign-in-icon {

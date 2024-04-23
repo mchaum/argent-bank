@@ -9,6 +9,7 @@ const Form = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [rememberMe, setRememberMe] = useState(false);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -20,9 +21,9 @@ const Form = () => {
         e.preventDefault();
 
         // Dispatch (fonction redux) de l'action logIn avec les données de connexion //
-        dispatch(logIn({email, password})).then(action => {
+        dispatch(logIn({email, password, rememberMe})).then(action => {
             // Retour vers une page une fois la connexion réussie //
-            navigate("/")
+            navigate("/user-account")
         });
     }
 
@@ -50,9 +51,12 @@ const Form = () => {
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="input-remember">
-                        <input type="checkbox" id="remember-me" /><label htmlFor="remember-me"
-                        >Remember me</label
-                        >
+                        <input 
+                        type="checkbox" 
+                        id="remember-me"
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)} />
+                        <label htmlFor="remember-me">Remember me</label>
                     </div>
                     <button type="submit" className="sign-in-button">
                         Sign In
