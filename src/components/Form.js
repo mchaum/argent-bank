@@ -39,6 +39,7 @@ const Form = () => {
                             type="email"
                             id="email"
                             value={email}
+                            autoComplete="off"
                             // On store le input du champ //
                             onChange={(e) => setEmail(e.target.value)} />
                     </div>
@@ -48,6 +49,7 @@ const Form = () => {
                             type="password"
                             id="password"
                             value={password}
+                            autoComplete="off"
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="input-remember">
