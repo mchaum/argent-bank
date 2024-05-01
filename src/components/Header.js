@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import Logo from '../assets/argentBankLogo.png';
+import Logo from '../assets/argentBankLogo.webp';
 import { logOut } from '../features/auth/authSlice';
 import { fetchUserData } from '../features/auth/userSlice';
 

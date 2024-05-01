@@ -88,6 +88,12 @@ html {
     display: flex;
 }
 
+@media (max-width: 920px) {
+    .main-nav {
+    padding: 0 10px;
+    }
+}
+
 /* Banner */
 
 .sr-only {
@@ -108,7 +114,7 @@ html {
 }
 
 .banner {
-    background-image: url('../assets/bank-tree.jpeg');
+    background-image: url('../assets/bank-tree.webp');
     background-position: 0 -50px;
     background-size: cover;
     background-repeat: no-repeat;

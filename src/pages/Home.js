@@ -2,9 +2,9 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Features from '../components/Features';
-import PriorityImg from '../assets/icon-chat.png';
-import MoneyImg from '../assets/icon-money.png';
-import SecurityImg from '../assets/icon-security.png';
+import PriorityImg from '../assets/icon-chat.webp';
+import MoneyImg from '../assets/icon-money.webp';
+import SecurityImg from '../assets/icon-security.webp';
 import Footer from '../components/Footer';
 
 

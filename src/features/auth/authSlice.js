@@ -31,7 +31,7 @@ const authSlice = createSlice({
     name: "auth",
     initialState: {
         isLoading: false,
-        token: null,
+        token: localStorage.getItem('token') || sessionStorage.getItem('token') || null, 
         error: null,
       },
       // Reducers pour gérer les changements d'état //
