@@ -52,9 +52,10 @@ const authSlice = createSlice({
             state.isLoading = false;
             state.token = action.payload; // Stockage du token dans l'état //
         })
-        builder.addCase(logIn.rejected, (state) => {
+        builder.addCase(logIn.rejected, (state, action) => {
             state.isLoading = false;
             state.token = null;
+            state.error = action.payload; // Ajout du stockage du message d'erreur //
         })
     }
 })

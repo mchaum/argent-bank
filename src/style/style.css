@@ -227,6 +227,11 @@ html {
     padding-top: 3rem;
 }
 
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
 /* Erreur 404 */
 
 .error-container {
